@@ -56,6 +56,7 @@ public class ForegroundService extends Service {
 
         // Create notification channel
         NotificationChannel channel = new NotificationChannel("foreground.service.channel", "Background Services", importance);
+        channel.setShowBadge(false);
         channel.setDescription("Enables background processing.");
         getSystemService(NotificationManager.class).createNotificationChannel(channel);
 
